@@ -30,4 +30,34 @@ Exercício:
 
 # EXERCÍCIO BÔNUS 1: Valor do frete.
 
+p = float(input("Informe o peso do seu produto (em Quilos): "))
+d = float(input("Informe a distância até o destino (em Quilômetros): "))
 
+# Se o peso for até 2 Kg :
+if (p <= 2):
+    if (d <= 100): # Se a distância for até 100 Km
+        frete = 5.00
+    elif (d >= 101 and d <= 500): # Se a distância estiver entre 100 Km e 500 Km
+        frete = 8.00
+    else: # Se a distância for maior que 500 Km
+        frete = 10.00
+
+# Se o peso estiver entre 2 Kg e 10 Kg :
+elif (p > 2 and p <= 10):
+    if (d <= 100):
+        frete = 10.00
+    elif (d >= 101 and d <= 500):
+        frete = 15.00
+    else:
+        frete = 20.00
+
+# Se o peso for maior que 10Kg :
+else:
+    if (d <= 100):
+        frete = 20.00
+    elif (d >= 101 and d <= 500):
+        frete = 30.00
+    else:
+        frete = 40.00
+
+print(f"O valor do frete será R${frete:.2f}") # .2f significa Duas casas decimais
